@@ -8,8 +8,8 @@ import org.apache.ibatis.session.SqlSession;
  * Clase utilitaria para usar las sentencias DML junto con myBatis
  *
  * @author acrispin
- * @param <T> tipo del mapper
- * @param <U> tipo de la clase que se usa como parámetro
+ * @param <T> tipo del objeto a ser manejado por el DAO
+ * @param <U> tipo del Mapper de mybatis que administra los metodos de acceso para el DAO
  */
 public abstract class DaoBase<T, U> extends DaoGeneric<U> {
     private static final String DELETE = "delete";

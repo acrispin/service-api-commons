@@ -13,8 +13,9 @@ import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.logging.log4j.Logger;
 
 /**
- * @param <U> Mapper a utilizar por la clase
+ *
  * @author acrispin
+ * @param <U> Mapper a utilizar por la clase
  */
 public abstract class DaoGeneric<U> {
 

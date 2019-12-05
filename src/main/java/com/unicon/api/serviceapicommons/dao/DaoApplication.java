@@ -16,6 +16,8 @@ import org.apache.logging.log4j.Logger;
 /**
  *
  * @author acrispin
+ * @param <T> tipo del objeto a ser manejado por el DAO
+ * @param <U> tipo del Mapper de mybatis que administra los metodos de acceso para el DAO
  */
 public abstract class DaoApplication<T, U> extends DaoBase<T, U> {
 
