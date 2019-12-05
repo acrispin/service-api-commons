@@ -17,32 +17,32 @@
 <!--        <package name="com.unicon.cs.bean"/>-->
 <!--    </typeAliases>-->
 
-    <environments default="produccion">
-        <environment id="produccion">
+    <environments default="single">
+        <environment id="single">
             <transactionManager type="JDBC"/>
             <dataSource type="JNDI">
                 <property name="data_source" value="jdbc/POL-SDC-TOAT"/>
             </dataSource>
         </environment>
-        <environment id="sdc-1">
+        <environment id="1-sdc">
             <transactionManager type="JDBC"/>
             <dataSource type="JNDI">
                 <property name="data_source" value="jdbc/POL-SDC-UNI"/>
             </dataSource>
         </environment>
-        <environment id="sdc-2">
+        <environment id="2-sdc">
             <transactionManager type="JDBC"/>
             <dataSource type="JNDI">
                 <property name="data_source" value="jdbc/POL-SDC-CMX"/>
             </dataSource>
         </environment>
-        <environment id="cmd-1">
+        <environment id="1-cmd">
             <transactionManager type="JDBC"/>
             <dataSource type="JNDI">
                 <property name="data_source" value="jdbc/POL-CMD-UNI"/>
             </dataSource>
         </environment>
-        <environment id="cmd-2">
+        <environment id="2-cmd">
             <transactionManager type="JDBC"/>
             <dataSource type="JNDI">
                 <property name="data_source" value="jdbc/POL-CMD-CMX"/>

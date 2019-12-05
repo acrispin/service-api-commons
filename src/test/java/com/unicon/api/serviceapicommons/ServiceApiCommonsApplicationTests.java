@@ -33,7 +33,7 @@ class ServiceApiCommonsApplicationTests {
 		log.info("enviroment: " + enviroment);
 	}
 
-	@Test
+	//@Test
 	void contextLoads1() {
 		log.info("test1 -----------");
 		String server = "", username = "", sessionId = "", enviroment = "";
@@ -66,7 +66,7 @@ class ServiceApiCommonsApplicationTests {
 		log.info("enviroment: " + enviroment);
 	}
 
-	@Test
+	//@Test
 	void contextLoads2() {
 		log.info("test2 -----------");
 		String server = "", username = "", sessionId = "", enviroment = "";

@@ -21,7 +21,7 @@ public abstract class DaoApplication<T, U> extends DaoBase<T, U> {
 
     private static final Logger LOGGER = LogManager.getLogger(DaoApplication.class);
     private static final String RESOURCE_FILE = "sqlMapConfig.xml";
-    private static final String ENVIROMENT_JNDI = "produccion";
+    private static final String ENVIROMENT_SINGLE = "single";
     private static final String ENVIROMENT_DIRECT = LOGGER.isTraceEnabled() ? "junit" : "pooled";
     private static SqlSessionFactory sqlSessionFactory;
     private static final Map<String, SqlSessionFactory> SQL_SESSION_FACTORY_MAP_SDC = new HashMap<>();
@@ -58,11 +58,11 @@ public abstract class DaoApplication<T, U> extends DaoBase<T, U> {
     private static SqlSessionFactory init() {
         SqlSessionFactory ssf;
         try (InputStream inputStream = Resources.getResourceAsStream(RESOURCE_FILE)) {
-            ssf = new SqlSessionFactoryBuilder().build(inputStream, ENVIROMENT_JNDI);
+            ssf = new SqlSessionFactoryBuilder().build(inputStream, ENVIROMENT_SINGLE);
             if (ssf == null ||
                     ssf.getConfiguration() == null ||
                     ssf.getConfiguration().getEnvironment() == null) {
-                throw new PersistenceException(String.format("Environment '%s' incorrecto, se usara conexion directa", ENVIROMENT_JNDI));
+                throw new PersistenceException(String.format("Environment '%s' incorrecto, se usara conexion directa", ENVIROMENT_SINGLE));
             }
         } catch (IOException | RuntimeException ex) {
             LOGGER.error(ex.getMessage(), ex);
