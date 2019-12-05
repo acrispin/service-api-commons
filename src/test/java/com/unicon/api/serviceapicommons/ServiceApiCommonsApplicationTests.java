@@ -2,17 +2,19 @@ package com.unicon.api.serviceapicommons;
 
 import com.unicon.api.serviceapicommons.dao.DaoApplication;
 import com.unicon.api.serviceapicommons.dao.mapper.AppMapper;
+import lombok.extern.log4j.Log4j2;
 import org.apache.ibatis.exceptions.PersistenceException;
 import org.apache.ibatis.session.SqlSession;
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+//import org.slf4j.Logger;
+//import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
+@Log4j2
 class ServiceApiCommonsApplicationTests {
 
-	private static Logger log = LoggerFactory.getLogger(ServiceApiCommonsApplicationTests.class);
+	// private static Logger log = LoggerFactory.getLogger(ServiceApiCommonsApplicationTests.class);
 
 	@Test
 	void contextLoads() {
